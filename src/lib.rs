@@ -23,6 +23,9 @@ pub mod PomodoroCRUD {
 }
 }
 
+
+mod csv_operations {}
+
 mod block_distraction {
     // Blocks distracting apps using /etc/hosts
     pub fn block(){}
