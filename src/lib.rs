@@ -55,7 +55,9 @@ impl InterfacePomodoro {
 
 
 // Create time based chain of responsibility for lifecycle of a pomodoro
-
+// Ask for pomodoro cycles, default is 1.
+// Start =>  Thread.sleep(work_time/2) + During Notification + thead.sleep/2 -> End(if more cycles
+// then loop)
 mod handlers {
     pub mod alerts{
         pub fn start(args: &crate::InterfacePomodoro) -> Result<(), Box<dyn std::error::Error>> {
