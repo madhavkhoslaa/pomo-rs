@@ -104,7 +104,17 @@ mod handlers {
     }
 }
 }
-mod logging{
+pub mod logging{
+    
+    #[derive(Debug)]
+    pub struct Log<'a>{
+        text: &'a str,
+        event: &'a str,
+        time: usize,
+    }
     // This is done to log your pomodoro sessions and the tasks that you did dring them
+    pub fn log(args: Log) {
+        println!("logging is to be implemented for {:?}", args); 
+    }
 }
 
